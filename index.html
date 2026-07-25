@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATP FLEET MANAGEMENT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- الصفحة الرئيسية -->
+
+    <div id="homePage" class="page">
+
+        <div class="container">
+
+            <div class="logo-container">
+                <img src="logo.png" alt="ATP Logo" class="logo">
+            </div>
+
+            <h1>شركة الراشد للتقنية والطاقة</h1>
+            <h2>ATP FLEET MANAGEMENT</h2>
+
+            <h3 id="todayName"></h3>
+            <h3 id="todayDate"></h3>
+            <h3 id="todayTime"></h3>
+
+            <button onclick="showRegisterPage()">
+                تسجيل حالة المركبات
+            </button>
+
+            <button onclick="showViewPage()">
+                عرض حالة المركبات
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- صفحة تسجيل حالة المركبات -->
+
+    <div id="registerPage" class="page" style="display:none;">
+
+        <div class="container">
+
+            <h2>تسجيل حالة المركبات</h2>
+
+
+            <!-- نوع المركبة -->
+
+            <div class="card">
+
+                <h3>نوع المركبة</h3>
+
+                <select id="vehicleType">
+
+                    <option value="">---</option>
+
+                    <option value="PRIVATE">
+                        المركبات الصغيرة
+                    </option>
+
+                    <option value="TRUCKS">
+                        رؤوس الشاحنات والقاطرات
+                    </option>
+
+                    <option value="EQUIPMENT">
+                        المعدات الكبيرة والصغيرة
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- رقم المركبة -->
+
+            <div class="card">
+
+                <h3>رقم المركبة</h3>
+
+                <select id="vehicleNumber">
+
+                    <option value="">---</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- اسم السائق -->
+
+            <div class="card">
+
+                <h3>اسم السائق</h3>
+
+                <div>
+
+                    <input type="radio"
+                           id="mainDriver"
+                           name="driverOption"
+                           checked>
+
+                    <label for="mainDriver">
+
+                        <span id="driverName">
+                            اسم السائق
+                        </span>
+
+                    </label>
+
+                </div>
+
+                <br>
+
+                <div>
+
+                    <input type="radio"
+                           id="otherDriver"
+                           name="driverOption">
+
+                    <label for="otherDriver">
+
+                        سائق آخر
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- اسم السائق الآخر -->
+
+            <div class="card"
+                 id="otherDriverCard"
+                 style="display:none;">
+
+                <h3>اسم السائق</h3>
+
+                <input type="text"
+                       id="otherDriverName">
+
+            </div>
+
+
+            <!-- حالة المركبة -->
+
+            <div class="card">
+
+                <h3>حالة المركبة</h3>
+
+                <div>
+
+                    <input type="radio"
+                           id="working"
+                           name="vehicleStatus"
+                           checked>
+
+                    <label for="working">
+
+                        تعمل
+
+                    </label>
+
+                </div>
+
+                <br>
+
+                <div>
+
+                    <input type="radio"
+                           id="stopped"
+                           name="vehicleStatus">
+
+                    <label for="stopped">
+
+                        متوقفة
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- سبب التوقف -->
+
+            <div class="card"
+                 id="reasonCard"
+                 style="display:none;">
+
+                <h3>سبب التوقف</h3>
+
+                <textarea id="stopReason"
+                          rows="4"></textarea>
+
+            </div>
+
+
+            <!-- تحديث الحالة -->
+
+            <div class="card">
+
+                <button onclick="updateVehicleStatus()">
+
+                    تحديث حالة المركبة
+
+                </button>
+
+            </div>
+
+
+            <!-- إرسال التقرير -->
+
+            <div class="card">
+
+                <button onclick="sendWhatsAppReport()">
+
+                    إرسال التقرير عبر واتساب
+
+                </button>
+
+            </div>
+
+
+            <button onclick="goHome()">
+
+                العودة للصفحة الرئيسية
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- صفحة عرض حالة المركبات -->
+
+    <div id="viewPage" class="page" style="display:none;">
+
+        <div class="container">
+
+            <h2>عرض حالة المركبات</h2>
+
+
+            <!-- المركبات الصغيرة -->
+
+            <div class="section">
+
+                <h3>المركبات الصغيرة</h3>
+
+                <div class="statistics">
+
+                    <span id="privateTotal"></span>
+                    <span id="privateWorking"></span>
+                    <span id="privateStopped"></span>
+
+                </div>
+
+                <div id="privateVehicles"></div>
+
+            </div>
+
+
+            <!-- الشاحنات -->
+
+            <div class="section">
+
+                <h3>رؤوس الشاحنات والقاطرات</h3>
+
+                <div class="statistics">
+
+                    <span id="trucksTotal"></span>
+                    <span id="trucksWorking"></span>
+                    <span id="trucksStopped"></span>
+
+                </div>
+
+                <div id="trucksVehicles"></div>
+
+            </div>
+
+
+            <!-- المعدات -->
+
+            <div class="section">
+
+                <h3>المعدات الكبيرة والصغيرة</h3>
+
+                <div class="statistics">
+
+                    <span id="equipmentTotal"></span>
+                    <span id="equipmentWorking"></span>
+                    <span id="equipmentStopped"></span>
+
+                </div>
+
+                <div id="equipmentVehicles"></div>
+
+            </div>
+
+
+            <button onclick="goHome()">
+
+                العودة للصفحة الرئيسية
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ملفات المشروع -->
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
