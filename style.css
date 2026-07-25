@@ -1,0 +1,295 @@
+/******************************************
+   ATP FLEET MANAGEMENT
+******************************************/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma, Arial, sans-serif;
+    background-color:#f4f6f9;
+    color:#222;
+    direction:rtl;
+}
+
+.page{
+    width:100%;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+
+/*----------------------------------------
+    الشعار
+----------------------------------------*/
+
+.logo-container{
+    margin-bottom:20px;
+}
+
+.logo{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+}
+
+
+/*----------------------------------------
+    العناوين
+----------------------------------------*/
+
+h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+h3{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+
+/*----------------------------------------
+    التاريخ والوقت
+----------------------------------------*/
+
+#todayName,
+#todayDate,
+#todayTime{
+    margin-bottom:10px;
+    color:#0d47a1;
+}
+
+
+/*----------------------------------------
+    البطاقات
+----------------------------------------*/
+
+.card{
+    width:100%;
+    background:#ffffff;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.10);
+}
+
+.section{
+    margin-bottom:25px;
+}
+
+
+/*----------------------------------------
+    الأزرار
+----------------------------------------*/
+
+button{
+    width:100%;
+    height:60px;
+    border:none;
+    border-radius:15px;
+    background:#1565c0;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:5px;
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+
+/*----------------------------------------
+    الحقول
+----------------------------------------*/
+
+select,
+input[type="text"]{
+
+    width:100%;
+    height:50px;
+    border-radius:10px;
+    border:1px solid #cccccc;
+    padding:10px;
+    font-size:16px;
+
+}
+
+textarea{
+
+    width:100%;
+    border-radius:10px;
+    border:1px solid #cccccc;
+    padding:10px;
+    font-size:16px;
+    resize:none;
+
+}
+
+
+input[type="radio"]{
+    transform:scale(1.3);
+    margin-left:8px;
+}
+
+label{
+    font-size:16px;
+}
+
+
+/*----------------------------------------
+    إحصائيات الأقسام
+----------------------------------------*/
+
+.statistics{
+
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:15px;
+
+}
+
+.statistics span{
+
+    flex:1;
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.10);
+    font-size:14px;
+    font-weight:bold;
+
+}
+
+
+/*----------------------------------------
+    بطاقات المركبات
+----------------------------------------*/
+
+.vehicle-card{
+
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.10);
+
+}
+
+.vehicle-number{
+
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:8px;
+
+}
+
+.vehicle-driver{
+
+    margin-bottom:8px;
+    font-size:16px;
+
+}
+
+.vehicle-status{
+
+    margin-bottom:8px;
+    font-weight:bold;
+
+}
+
+.vehicle-time{
+
+    font-size:13px;
+    color:#666;
+
+}
+
+
+/*----------------------------------------
+    ألوان الحالة
+----------------------------------------*/
+
+.status-working{
+
+    color:green;
+
+}
+
+.status-stopped{
+
+    color:red;
+
+}
+
+.status-absent{
+
+    color:orange;
+
+}
+
+.status-offline{
+
+    color:gray;
+
+}
+
+
+/*----------------------------------------
+    الهواتف المحمولة
+----------------------------------------*/
+
+@media (max-width:768px){
+
+    .logo{
+        width:120px;
+        height:120px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    h3{
+        font-size:16px;
+    }
+
+    button{
+        font-size:16px;
+        height:55px;
+    }
+
+    .statistics{
+        flex-direction:column;
+    }
+
+    .vehicle-number{
+        font-size:16px;
+    }
+
+    .vehicle-driver{
+        font-size:14px;
+    }
+
+}
