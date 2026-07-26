@@ -1,11 +1,11 @@
-/******************************************
-   ATP FLEET MANAGEMENT
-******************************************/
+/************************************************
+                ATP FLEET MANAGEMENT
+************************************************/
 
 const vehicles = [
 
 /*----------------------------------------
-   المركبات الصغيرة
+المركبات الصغيرة
 ----------------------------------------*/
 
 {
@@ -15,6 +15,7 @@ const vehicles = [
     driver: "أحمد",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
@@ -25,6 +26,7 @@ const vehicles = [
     driver: "محمد",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
@@ -35,12 +37,13 @@ const vehicles = [
     driver: "خالد",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
 
 /*----------------------------------------
-   رؤوس الشاحنات والقاطرات
+رؤوس الشاحنات والقاطرات
 ----------------------------------------*/
 
 {
@@ -50,6 +53,7 @@ const vehicles = [
     driver: "سعد",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
@@ -60,6 +64,7 @@ const vehicles = [
     driver: "عبدالله",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
@@ -70,12 +75,13 @@ const vehicles = [
     driver: "إبراهيم",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
 
 /*----------------------------------------
-   المعدات الكبيرة والصغيرة
+المعدات الكبيرة والصغيرة
 ----------------------------------------*/
 
 {
@@ -85,6 +91,7 @@ const vehicles = [
     driver: "ماجد",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
@@ -95,6 +102,7 @@ const vehicles = [
     driver: "صالح",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 },
 
@@ -105,6 +113,7 @@ const vehicles = [
     driver: "يوسف",
     status: "working",
     reason: "",
+    notes: "",
     lastUpdate: ""
 }
 
