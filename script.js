@@ -1,16 +1,90 @@
-/******************************************
-   ATP FLEET MANAGEMENT
-******************************************/
+/************************************************
+ ATP FLEET MANAGEMENT
+ script.js
+ Google Sheets Version
+************************************************/
+
+
+//========================================
+// رابط Google Apps Script
+//========================================
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbwphyiajZI8PDSUUV1-f_GxSZw36WevMF5Vn3o-QaSuA-zC1LvIuSdh2X0CkbZAlT9NlQ/exec";
+
+
+
+// تخزين بيانات المركبات مؤقتاً
+let vehicles = [];
+
+
+
+//========================================
+// تحميل البيانات من Google Sheets
+//========================================
+
+async function loadVehicles(){
+
+    try{
+
+        const response =
+        await fetch(API_URL);
+
+
+        vehicles =
+        await response.json();
+
+
+        console.log("Vehicles Loaded", vehicles);
+
+
+        fillVehicleNumbers();
+
+
+        renderVehicles();
+
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+        alert("تعذر الاتصال بقاعدة البيانات");
+
+    }
+
+}
+
+
+
+// تحميل البيانات عند بداية التشغيل
+
+loadVehicles();
+
+
+
+// تحديث البيانات كل 30 ثانية
+
+setInterval(loadVehicles,30000);
+
+
+
+
 
 //========================================
 // التاريخ والوقت
 //========================================
 
-function updateDateTime() {
+function updateDateTime(){
 
-    const now = new Date();
+
+    const now =
+    new Date();
+
 
     const days = [
+
         "الأحد",
         "الاثنين",
         "الثلاثاء",
@@ -18,375 +92,687 @@ function updateDateTime() {
         "الخميس",
         "الجمعة",
         "السبت"
+
     ];
 
-    document.getElementById("todayName").innerHTML =
-        days[now.getDay()];
 
-    document.getElementById("todayDate").innerHTML =
-        now.toLocaleDateString("en-GB");
+    document.getElementById("todayName")
+    .innerHTML =
+    days[now.getDay()];
 
-    document.getElementById("todayTime").innerHTML =
-        now.toLocaleTimeString("en-GB");
+
+    document.getElementById("todayDate")
+    .innerHTML =
+    now.toLocaleDateString("ar-SA");
+
+
+    document.getElementById("todayTime")
+    .innerHTML =
+    now.toLocaleTimeString("ar-SA");
+
 
 }
 
-setInterval(updateDateTime, 1000);
+
+setInterval(updateDateTime,1000);
+
 updateDateTime();
+
+
+
 
 
 //========================================
 // الانتقال بين الصفحات
 //========================================
 
-function hideAllPages() {
 
-    document.getElementById("homePage").style.display = "none";
-    document.getElementById("registerPage").style.display = "none";
-    document.getElementById("viewPage").style.display = "none";
+function hideAllPages(){
+
+    document.getElementById("homePage")
+    .style.display="none";
+
+
+    document.getElementById("registerPage")
+    .style.display="none";
+
+
+    document.getElementById("viewPage")
+    .style.display="none";
 
 }
 
-function showRegisterPage() {
+
+
+function showRegisterPage(){
 
     hideAllPages();
-    document.getElementById("registerPage").style.display = "block";
+
+
+    document.getElementById("registerPage")
+    .style.display="block";
 
 }
 
-function showViewPage() {
+
+
+function goHome(){
 
     hideAllPages();
-    document.getElementById("viewPage").style.display = "block";
-    renderVehicles();
+
+
+    document.getElementById("homePage")
+    .style.display="block";
 
 }
 
-function goHome() {
 
-    hideAllPages();
-    document.getElementById("homePage").style.display = "block";
+
+
+//========================================
+// حماية صفحة العرض
+//========================================
+
+
+function checkPassword(){
+
+
+    let password =
+    prompt("أدخل الرقم السري");
+
+
+    if(password==="16896"){
+
+
+        hideAllPages();
+
+
+        document.getElementById("viewPage")
+        .style.display="block";
+
+
+        renderVehicles();
+
+
+    }
+
+    else{
+
+
+        alert("الرقم السري غير صحيح");
+
+
+    }
+
 
 }
+
+
+
+
 
 
 //========================================
 // تعبئة أرقام المركبات
 //========================================
 
-const vehicleType =
-document.getElementById("vehicleType");
 
-const vehicleNumber =
-document.getElementById("vehicleNumber");
+function fillVehicleNumbers(){
 
 
-vehicleType.addEventListener("change", function () {
-
-    vehicleNumber.innerHTML =
-    '<option value="">---</option>';
-
-    const selectedType = this.value;
-
-    const selectedVehicles =
-        vehicles.filter(v => v.type === selectedType);
-
-    selectedVehicles.forEach(vehicle => {
-
-        const option =
-        document.createElement("option");
-
-        option.value = vehicle.number;
-        option.textContent = vehicle.number;
-
-        vehicleNumber.appendChild(option);
-
-    });
-
-});
+    const type =
+    document.getElementById("vehicleType");
 
 
+    const number =
+    document.getElementById("vehicleNumber");
+
+
+
+    if(!type || !number)
+    return;
+
+
+
+    type.onchange=function(){
+
+
+        number.innerHTML =
+        '<option value="">اختر</option>';
+
+
+
+        vehicles
+
+        .filter(v=>v.type===type.value)
+
+        .forEach(v=>{
+
+
+            let option =
+            document.createElement("option");
+
+
+            option.value =
+            v.number;
+
+
+            option.textContent =
+            v.number;
+
+
+            number.appendChild(option);
+
+
+
+        });
+
+
+
+    };
+
+
+
+
+
+    number.onchange=function(){
+
+
+        let vehicle =
+        vehicles.find(
+        v=>v.number===this.value
+        );
+
+
+
+        if(vehicle){
+
+
+            document.getElementById("driverName")
+            .innerHTML =
+            vehicle.driver;
+
+
+
+        }
+
+
+
+    };
+
+
+
+}
 //========================================
-// تعبئة اسم السائق
+// إظهار سبب التوقف
 //========================================
 
-vehicleNumber.addEventListener("change", function () {
-
-    const selectedVehicle =
-    vehicles.find(v => v.number === this.value);
-
-    if (selectedVehicle) {
-
-        document.getElementById("driverName").innerHTML =
-        selectedVehicle.driver;
-
-    }
-
-});
-
-
-//========================================
-// إظهار السائق الآخر
-//========================================
-
-document.getElementById("otherDriver")
-.addEventListener("change", function () {
-
-    document.getElementById("otherDriverCard")
-    .style.display = "block";
-
-});
-
-
-document.getElementById("mainDriver")
-.addEventListener("change", function () {
-
-    document.getElementById("otherDriverCard")
-    .style.display = "none";
-
-});
-
-
-//========================================
-// سبب التوقف
-//========================================
 
 document.getElementById("stopped")
-.addEventListener("change", function () {
+.addEventListener("change",function(){
+
 
     document.getElementById("reasonCard")
-    .style.display = "block";
+    .style.display="flex";
+
 
 });
+
 
 
 document.getElementById("working")
-.addEventListener("change", function () {
+.addEventListener("change",function(){
+
 
     document.getElementById("reasonCard")
-    .style.display = "none";
+    .style.display="none";
+
 
 });
 
 
+
+
+
 //========================================
-// تحديث حالة المركبة
+// حفظ وإرسال التقرير
 //========================================
 
-function updateVehicleStatus() {
+
+async function saveAndSendReport(){
+
 
     const number =
     document.getElementById("vehicleNumber").value;
 
+
+
     const vehicle =
-    vehicles.find(v => v.number === number);
+    vehicles.find(
+    v=>v.number===number
+    );
 
-    if (!vehicle) {
 
-        alert("يرجى اختيار المركبة.");
+
+    if(!vehicle){
+
+        alert("يرجى اختيار المركبة");
+
         return;
 
     }
 
-    vehicle.status =
-    document.getElementById("working").checked ?
-    "working" :
+
+
+
+    const alternativeDriver =
+    document.getElementById("otherDriverName")
+    .value.trim();
+
+
+
+
+    const usedDriver =
+    alternativeDriver !== ""
+    ?
+    alternativeDriver
+    :
+    vehicle.driver;
+
+
+
+
+    const status =
+    document.getElementById("working").checked
+    ?
+    "working"
+    :
     "stopped";
 
-    vehicle.reason =
-    document.getElementById("stopReason").value;
 
 
-    if (
-        document.getElementById("otherDriver").checked
-    ) {
 
-        vehicle.driver =
-        document.getElementById("otherDriverName").value;
+    const reason =
+    document.getElementById("stopReason")
+    .value;
+
+
+
+    const notes =
+    document.getElementById("vehicleNotes")
+    .value.trim()
+    ||
+    "لا توجد ملاحظات";
+
+
+
+    const now =
+    new Date();
+
+
+
+    const lastUpdate =
+
+    now.toLocaleDateString("ar-SA")
+    +
+    " - "
+    +
+    now.toLocaleTimeString("ar-SA");
+
+
+
+
+
+    // تحديث البيانات في Google Sheets
+
+    const updateData = {
+
+
+        id:vehicle.id,
+
+        status:status,
+
+        reason:reason,
+
+        notes:notes,
+
+        lastUpdate:lastUpdate
+
+
+    };
+
+
+
+
+
+    try{
+
+
+        await fetch(API_URL,{
+
+            method:"POST",
+
+            body:JSON.stringify(updateData)
+
+        });
+
+
+
+        alert("تم حفظ البيانات بنجاح");
+
+
+        sendWhatsAppReport(
+            vehicle,
+            usedDriver,
+            status,
+            reason,
+            notes,
+            lastUpdate
+        );
+
+
+
+        loadVehicles();
+
+
 
     }
 
 
-    const now = new Date();
-
-    vehicle.lastUpdate =
-
-        now.toLocaleDateString("en-GB")
-        + " - " +
-        now.toLocaleTimeString("en-GB");
+    catch(error){
 
 
-    alert("تم تحديث حالة المركبة بنجاح.");
+        console.log(error);
+
+
+        alert("حدث خطأ أثناء الحفظ");
+
+
+    }
+
+
 
 }
 
 
+
+
+
+
+
 //========================================
-// إرسال التقرير عبر واتساب
+// إرسال واتساب
 //========================================
 
-function sendWhatsAppReport() {
 
-    const number =
-    document.getElementById("vehicleNumber").value;
-
-    const vehicle =
-    vehicles.find(v => v.number === number);
-
-    if (!vehicle) {
-
-        alert("يرجى اختيار المركبة.");
-        return;
-
-    }
+function sendWhatsAppReport(
+vehicle,
+driver,
+status,
+reason,
+notes,
+lastUpdate
+){
 
 
-    let message =
+
+let message =
 
 `ATP FLEET MANAGEMENT
 
 شركة الراشد للتقنية والطاقة
 
-نوع المركبة : ${vehicle.type}
-
 رقم المركبة : ${vehicle.number}
 
-اسم السائق : ${vehicle.driver}
+نوع المركبة : ${vehicle.type}
+
+السائق المستخدم اليوم : ${driver}
 
 حالة المركبة : ${
-vehicle.status === "working"
-? "تعمل"
-: "متوقفة"
+status==="working"
+?
+"تعمل"
+:
+"متوقفة"
 }
 
-سبب التوقف : ${vehicle.reason}
+سبب التوقف : ${reason || "لا يوجد"}
 
-آخر تحديث : ${vehicle.lastUpdate}`;
+الملاحظات : ${notes}
 
-
-    const phone =
-    "966509495516";
+آخر تحديث : ${lastUpdate}`;
 
 
-    const url =
 
-`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+const phone =
+"966509495516";
 
 
-    window.open(url, "_blank");
+
+const url =
+
+"https://wa.me/"
++
+phone
++
+"?text="
++
+encodeURIComponent(message);
+
+
+
+window.open(url,"_blank");
+
+
 
 }
+
+
+
+
+
 
 
 //========================================
 // عرض المركبات
 //========================================
 
-function renderVehicles() {
 
-    renderSection(
-        "PRIVATE",
-        "privateVehicles",
-        "privateTotal",
-        "privateWorking",
-        "privateStopped"
-    );
+function renderVehicles(){
 
-    renderSection(
-        "TRUCKS",
-        "trucksVehicles",
-        "trucksTotal",
-        "trucksWorking",
-        "trucksStopped"
-    );
 
-    renderSection(
-        "EQUIPMENT",
-        "equipmentVehicles",
-        "equipmentTotal",
-        "equipmentWorking",
-        "equipmentStopped"
-    );
+
+renderSection(
+"PRIVATE",
+"privateSection",
+"privateTotal",
+"privateWorking",
+"privateStopped"
+);
+
+
+
+renderSection(
+"TRUCKS",
+"trucksSection",
+"trucksTotal",
+"trucksWorking",
+"trucksStopped"
+);
+
+
+
+renderSection(
+"EQUIPMENT",
+"equipmentSection",
+"equipmentTotal",
+"equipmentWorking",
+"equipmentStopped"
+);
+
+
 
 }
 
 
+
+
+
+
+
 function renderSection(
-    type,
-    containerId,
-    totalId,
-    workingId,
-    stoppedId
-) {
-
-    const container =
-    document.getElementById(containerId);
-
-    container.innerHTML = "";
-
-    const list =
-    vehicles.filter(v => v.type === type);
+type,
+containerId,
+totalId,
+workingId,
+stoppedId
+){
 
 
-    document.getElementById(totalId).innerHTML =
-    `الإجمالي : ${list.length}`;
+
+const container =
+document.getElementById(containerId);
 
 
-    const working =
-    list.filter(v => v.status === "working").length;
 
-    const stopped =
-    list.filter(v => v.status === "stopped").length;
+if(!container)
+return;
 
 
-    document.getElementById(workingId).innerHTML =
-    `تعمل : ${working}`;
 
-    document.getElementById(stoppedId).innerHTML =
-    `متوقفة : ${stopped}`;
+container.innerHTML="";
 
 
-    list.forEach(vehicle => {
 
-        const card =
-        document.createElement("div");
-
-        card.className = "vehicle-card";
-
-
-        card.innerHTML =
-
-        `
-        <div class="vehicle-number">
-            ${vehicle.number}
-        </div>
-
-        <div class="vehicle-driver">
-            ${vehicle.driver}
-        </div>
-
-        <div class="vehicle-status ${vehicle.status === "working"
-        ? "status-working"
-        : "status-stopped"}">
-
-            ${vehicle.status === "working"
-            ? "تعمل"
-            : "متوقفة"}
-
-        </div>
-
-        <div>
-            ${vehicle.reason}
-        </div>
-
-        <div class="vehicle-time">
-            ${vehicle.lastUpdate}
-        </div>
-        `;
+const list =
+vehicles.filter(
+v=>v.type===type
+);
 
 
-        container.appendChild(card);
 
-    });
+
+document.getElementById(totalId)
+.innerHTML=list.length;
+
+
+
+document.getElementById(workingId)
+.innerHTML=list.filter(
+v=>v.status==="working"
+).length;
+
+
+
+document.getElementById(stoppedId)
+.innerHTML=list.filter(
+v=>v.status==="stopped"
+).length;
+
+
+
+
+
+list.forEach(vehicle=>{
+
+
+
+let card =
+document.createElement("div");
+
+
+
+card.className =
+"vehicle-card";
+
+
+
+
+let statusClass =
+vehicle.status==="working"
+?
+"status-working"
+:
+"status-stopped";
+
+
+
+
+
+card.innerHTML =
+
+`
+
+<div class="vehicle-status-dot ${statusClass}">
+</div>
+
+
+<div class="vehicle-number">
+
+${vehicle.number}
+
+</div>
+
+
+
+<div class="vehicle-driver">
+
+${vehicle.driver}
+
+</div>
+
+
+
+<div class="vehicle-notes">
+
+${vehicle.notes || "لا توجد ملاحظات"}
+
+</div>
+
+`;
+
+
+
+container.appendChild(card);
+
+
+
+});
+
+
+
+}
+
+
+
+
+
+
+//========================================
+// فتح وإغلاق الأقسام
+//========================================
+
+
+function toggleSection(id){
+
+
+const section =
+document.getElementById(id);
+
+
+
+if(section.style.display==="none"){
+
+    section.style.display="block";
+
+}
+
+else{
+
+    section.style.display="none";
+
+}
+
+
 
 }
