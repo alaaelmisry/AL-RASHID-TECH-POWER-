@@ -168,28 +168,10 @@ vehicleNumber.addEventListener("change", () => {
 
 });
 
-
-
-/*===============================================
-                سبب التوقف
-================================================*/
-
-const working =
-document.getElementById("working");
-
-const stopped =
-document.getElementById("stopped");
-
-const reasonCard =
-document.getElementById("reasonCard");
-
-
 working.addEventListener("click", () => {
 
     working.classList.add("active");
     stopped.classList.remove("stop-active");
-
-    reasonCard.style.display = "none";
 
 });
 
@@ -199,9 +181,9 @@ stopped.addEventListener("click", () => {
     stopped.classList.add("stop-active");
     working.classList.remove("active");
 
-    reasonCard.style.display = "block";
-
 });
+
+
 /*===============================================
             حفظ حالة المركبة وتحديث البيانات
 ================================================*/
@@ -226,20 +208,23 @@ function saveAndSendReport() {
 
     /* حالة المركبة */
 
-  if (working.classList.contains("active")) {
+ if (working.classList.contains("active")) {
 
     selectedVehicle.status = "working";
-    selectedVehicle.reason = "";
 
 } else {
 
     selectedVehicle.status = "stopped";
 
-    selectedVehicle.reason =
-    document.getElementById("stopReason").value.trim();
-
 }
 
+selectedVehicle.reason = "";
+document.getElementById("otherDriverName").value = "";
+
+document.getElementById("vehicleNotes").value = "";
+
+working.classList.add("active");
+stopped.classList.remove("stop-active");
 
     /* اسم السائق */
 
