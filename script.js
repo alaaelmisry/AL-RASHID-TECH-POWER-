@@ -226,18 +226,19 @@ function saveAndSendReport() {
 
     /* حالة المركبة */
 
-    if (working.checked) {
+  if (working.classList.contains("active")) {
 
-        selectedVehicle.status = "working";
-        selectedVehicle.reason = "";
+    selectedVehicle.status = "working";
+    selectedVehicle.reason = "";
 
-    } else {
+} else {
 
-        selectedVehicle.status = "stopped";
-        selectedVehicle.reason =
-        document.getElementById("stopReason").value.trim();
+    selectedVehicle.status = "stopped";
 
-    }
+    selectedVehicle.reason =
+    document.getElementById("stopReason").value.trim();
+
+}
 
 
     /* اسم السائق */
