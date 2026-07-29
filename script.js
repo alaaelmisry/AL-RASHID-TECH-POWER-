@@ -177,23 +177,27 @@ vehicleNumber.addEventListener("change", () => {
 const working =
 document.getElementById("working");
 
-
 const stopped =
 document.getElementById("stopped");
-
 
 const reasonCard =
 document.getElementById("reasonCard");
 
 
-working.addEventListener("change", () => {
+working.addEventListener("click", () => {
+
+    working.classList.add("active");
+    stopped.classList.remove("stop-active");
 
     reasonCard.style.display = "none";
 
 });
 
 
-stopped.addEventListener("change", () => {
+stopped.addEventListener("click", () => {
+
+    stopped.classList.add("stop-active");
+    working.classList.remove("active");
 
     reasonCard.style.display = "block";
 
