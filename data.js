@@ -256,10 +256,10 @@ const vehicles = [
 ----------------------------------------*/
 
 {
-    id: 4,
+    id: 31,
     type: "TRUCKS",
-    number: "T-001",
-    driver: "سعد",
+    number: "4552",
+    driver: "RAFIQ",
     status: "working",
     reason: "",
     notes: "",
@@ -267,10 +267,10 @@ const vehicles = [
 },
 
 {
-    id: 5,
+    id: 32,
     type: "TRUCKS",
-    number: "T-002",
-    driver: "عبدالله",
+    number: "4553",
+    driver: "SAHBAZ",
     status: "working",
     reason: "",
     notes: "",
@@ -278,17 +278,182 @@ const vehicles = [
 },
 
 {
-    id: 6,
+    id: 33,
     type: "TRUCKS",
-    number: "T-003",
-    driver: "إبراهيم",
+    number: "4554",
+    driver: "ADHAM",
     status: "working",
     reason: "",
     notes: "",
     lastUpdate: ""
 },
 
+{
+    id: 34,
+    type: "TRUCKS",
+    number: "4556",
+    driver: "BAKR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
 
+{
+    id: 35,
+    type: "TRUCKS",
+    number: "4557",
+    driver: "ZIA UR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 36,
+    type: "TRUCKS",
+    number: "4558",
+    driver: "RADI",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+  {
+    id: 37,
+    type: "TRUCKS",
+    number: "4559",
+    driver: "RAMDAN",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 38,
+    type: "TRUCKS",
+    number: "2924",
+    driver: "SAID",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 39,
+    type: "TRUCKS",
+    number: "2932",
+    driver: "MUDATHER",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+  {
+    id: 40,
+    type: "TRUCKS",
+    number: "2950",
+    driver: "NO DRIVER",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 41,
+    type: "TRUCKS",
+    number: "4676",
+    driver: "LAKBA",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 42,
+    type: "TRUCKS",
+    number: "4677",
+    driver: "SAMI",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 43,
+    type: "TRUCKS",
+    number: "2062",
+    driver: "SHEVNDR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 44,
+    type: "TRUCKS",
+    number: "2087",
+    driver: "KISHOR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 45,
+    type: "TRUCKS",
+    number: "6031",
+    driver: "MENA",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+  {
+    id: 46,
+    type: "TRUCKS",
+    number: "6032",
+    driver: "NO DRIVER",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 47,
+    type: "TRUCKS",
+    number: "6033",
+    driver: "SAFIL",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 48,
+    type: "TRUCKS",
+    number: "3162",
+    driver: "NO DRIVER",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+  
 /*----------------------------------------
 المعدات الكبيرة والصغيرة
 ----------------------------------------*/
