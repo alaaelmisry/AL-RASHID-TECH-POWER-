@@ -11,8 +11,8 @@ const vehicles = [
 {
     id: 1,
     type: "PRIVATE",
-    number: "1001",
-    driver: "أحمد",
+    number: "7983",
+    driver: "ALAA",
     status: "working",
     reason: "",
     notes: "",
@@ -22,8 +22,8 @@ const vehicles = [
 {
     id: 2,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "2175",
+    driver: "AYMAN",
     status: "working",
     reason: "",
     notes: "",
@@ -33,8 +33,8 @@ const vehicles = [
 {
     id: 3,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "2181",
+    driver: "TARIQ",
     status: "working",
     reason: "",
     notes: "",
@@ -43,8 +43,8 @@ const vehicles = [
   {
     id: 4,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "9306",
+    driver: "AMMAR",
     status: "working",
     reason: "",
     notes: "",
@@ -54,8 +54,8 @@ const vehicles = [
 {
     id: 5,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "9311",
+    driver: "ARGY",
     status: "working",
     reason: "",
     notes: "",
@@ -65,8 +65,8 @@ const vehicles = [
 {
     id: 6,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "9520",
+    driver: "MOSTFA",
     status: "working",
     reason: "",
     notes: "",
@@ -76,8 +76,8 @@ const vehicles = [
 {
     id: 7,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "9521",
+    driver: "SHBAZ",
     status: "working",
     reason: "",
     notes: "",
@@ -87,8 +87,8 @@ const vehicles = [
   {
     id: 8,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "6163",
+    driver: "OKAIRY",
     status: "working",
     reason: "",
     notes: "",
@@ -98,8 +98,8 @@ const vehicles = [
 {
     id: 9,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "6167",
+    driver: "KHODAIR",
     status: "working",
     reason: "",
     notes: "",
@@ -109,8 +109,8 @@ const vehicles = [
 {
     id: 10,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "2190",
+    driver: "WAGHAT",
     status: "working",
     reason: "",
     notes: "",
@@ -120,8 +120,8 @@ const vehicles = [
 {
     id: 11,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "2204",
+    driver: "SAJJAD",
     status: "working",
     reason: "",
     notes: "",
@@ -131,8 +131,8 @@ const vehicles = [
   {
     id: 12,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "2141",
+    driver: "ALADIN",
     status: "working",
     reason: "",
     notes: "",
@@ -142,8 +142,8 @@ const vehicles = [
 {
     id: 13,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "2199",
+    driver: "REDA",
     status: "working",
     reason: "",
     notes: "",
@@ -153,8 +153,8 @@ const vehicles = [
 {
     id: 14,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "4682",
+    driver: "JACOUB",
     status: "working",
     reason: "",
     notes: "",
@@ -164,8 +164,8 @@ const vehicles = [
 {
     id: 15,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "4683",
+    driver: "ZESHAN",
     status: "working",
     reason: "",
     notes: "",
@@ -175,8 +175,8 @@ const vehicles = [
   {
     id: 16,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "4685",
+    driver: "WAQAS",
     status: "working",
     reason: "",
     notes: "",
@@ -186,8 +186,8 @@ const vehicles = [
 {
     id: 17,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "5383",
+    driver: "MUDATHR",
     status: "working",
     reason: "",
     notes: "",
@@ -197,8 +197,8 @@ const vehicles = [
 {
     id: 18,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "6102",
+    driver: "ADLY",
     status: "working",
     reason: "",
     notes: "",
@@ -208,8 +208,8 @@ const vehicles = [
 {
     id: 19,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "7843",
+    driver: "FARES",
     status: "working",
     reason: "",
     notes: "",
@@ -219,8 +219,8 @@ const vehicles = [
   {
     id: 20,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "8191",
+    driver: "ARFA",
     status: "working",
     reason: "",
     notes: "",
@@ -230,8 +230,8 @@ const vehicles = [
 {
     id: 21,
     type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
+    number: "4284",
+    driver: "GAZALY",
     status: "working",
     reason: "",
     notes: "",
@@ -240,39 +240,6 @@ const vehicles = [
 
 {
     id: 22,
-    type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 23,
-    type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-  {
-    id: 24,
-    type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 25,
     type: "PRIVATE",
     number: "1002",
     driver: "محمد",
