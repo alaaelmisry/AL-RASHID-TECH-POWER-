@@ -336,7 +336,7 @@ const vehicles = [
     id: 38,
     type: "TRUCKS",
     number: "2924",
-    driver: "SAID",
+    driver: "NO DRIVER",
     status: "working",
     reason: "",
     notes: "",
@@ -453,16 +453,185 @@ const vehicles = [
     lastUpdate: ""
 },
 
+/*----------------------------------------
+السيارات المتخصصة
+----------------------------------------*/
+
+{
+    id: 1,
+    type: "SPECIAL",
+    number: "2633",
+    driver: "BILAL",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 2,
+    type: "SPECIAL",
+    number: "5018",
+    driver: "FATHY",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 3,
+    type: "SPECIAL",
+    number: "6758",
+    driver: "OMRAN",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 4,
+    type: "SPECIAL",
+    number: "6835",
+    driver: "TILAWAT",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 5,
+    type: "SPECIAL",
+    number: "6839",
+    driver: "TILAK",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 6,
+    type: "SPECIAL",
+    number: "7542",
+    driver: "KRISNA",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+  {
+    id: 7,
+    type: "SPECIAL",
+    number: "7661",
+    driver: "ASAD",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 8,
+    type: "SPECIAL",
+    number: "7668",
+    driver: "OMRAN",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 9,
+    type: "SPECIAL",
+    number: "7759",
+    driver: "BILAL",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
   
 /*----------------------------------------
 المعدات الكبيرة والصغيرة
 ----------------------------------------*/
 
 {
+    id: 1,
+    type: "EQUIPMENT",
+    number: "1817",
+    driver: "PADAM",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 2,
+    type: "EQUIPMENT",
+    number: "2400",
+    driver: "ADHAM",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 3,
+    type: "EQUIPMENT",
+    number: "6219",
+    driver: "RAM KUMAR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+}
+
+  {
+    id: 4,
+    type: "EQUIPMENT",
+    number: "6900",
+    driver: "PAPUSH",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 5,
+    type: "EQUIPMENT",
+    number: "7470",
+    driver: "OTHMAN",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 6,
+    type: "EQUIPMENT",
+    number: "9956",
+    driver: "ZOHIB",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+}
+
+{
     id: 7,
     type: "EQUIPMENT",
-    number: "EQ-001",
-    driver: "ماجد",
+    number: "7772",
+    driver: "NO OPERATOR",
     status: "working",
     reason: "",
     notes: "",
@@ -472,8 +641,8 @@ const vehicles = [
 {
     id: 8,
     type: "EQUIPMENT",
-    number: "EQ-002",
-    driver: "صالح",
+    number: "1384",
+    driver: "SUNIL",
     status: "working",
     reason: "",
     notes: "",
@@ -483,8 +652,107 @@ const vehicles = [
 {
     id: 9,
     type: "EQUIPMENT",
-    number: "EQ-003",
-    driver: "يوسف",
+    number: "HITACHI",
+    driver: "MANSOR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+}
+
+{
+    id: 10,
+    type: "EQUIPMENT",
+    number: "7674",
+    driver: "KHUSIRAM",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 11,
+    type: "EQUIPMENT",
+    number: "GCB1",
+    driver: "GULAM F",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 12,
+    type: "EQUIPMENT",
+    number: "GCB2",
+    driver: "NO OPERATOR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+}
+
+{
+    id: 13,
+    type: "EQUIPMENT",
+    number: "1182",
+    driver: "RAJA",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 14,
+    type: "EQUIPMENT",
+    number: "6023",
+    driver: "NO OPERATOR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 15,
+    type: "EQUIPMENT",
+    number: "FORKLIFT",
+    driver: "NOUR",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+}
+
+{
+    id: 16,
+    type: "EQUIPMENT",
+    number: "BOBCAT",
+    driver: "OTHMAN",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 17,
+    type: "EQUIPMENT",
+    number: "BOMAG1",
+    driver: "LALBABU",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+
+{
+    id: 18,
+    type: "EQUIPMENT",
+    number: "BOMAG2",
+    driver: "LUQMAN",
     status: "working",
     reason: "",
     notes: "",
