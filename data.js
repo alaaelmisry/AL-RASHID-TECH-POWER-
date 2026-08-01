@@ -172,8 +172,19 @@ const vehicles = [
     lastUpdate: ""
 },
 
-  {
+ {
     id: 16,
+    type: "PRIVATE",
+    number: "4688",
+    driver: "ZESHAN",
+    status: "working",
+    reason: "",
+    notes: "",
+    lastUpdate: ""
+},
+  
+  {
+    id: 17,
     type: "PRIVATE",
     number: "4685",
     driver: "WAQAS",
@@ -184,7 +195,7 @@ const vehicles = [
 },
 
 {
-    id: 17,
+    id: 18,
     type: "PRIVATE",
     number: "5383",
     driver: "MUDATHR",
@@ -195,7 +206,7 @@ const vehicles = [
 },
 
 {
-    id: 18,
+    id: 19,
     type: "PRIVATE",
     number: "6102",
     driver: "ADLY",
@@ -206,7 +217,7 @@ const vehicles = [
 },
 
 {
-    id: 19,
+    id: 20,
     type: "PRIVATE",
     number: "7843",
     driver: "FARES",
@@ -217,7 +228,7 @@ const vehicles = [
 },
 
   {
-    id: 20,
+    id: 21,
     type: "PRIVATE",
     number: "8191",
     driver: "ARFA",
@@ -228,21 +239,10 @@ const vehicles = [
 },
 
 {
-    id: 21,
+    id: 22,
     type: "PRIVATE",
     number: "4284",
     driver: "GAZALY",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 22,
-    type: "PRIVATE",
-    number: "1002",
-    driver: "محمد",
     status: "working",
     reason: "",
     notes: "",
@@ -256,7 +256,7 @@ const vehicles = [
 ----------------------------------------*/
 
 {
-    id: 31,
+    id: 23,
     type: "TRUCKS",
     number: "4552",
     driver: "RAFIQ",
@@ -267,7 +267,7 @@ const vehicles = [
 },
 
 {
-    id: 32,
+    id: 24,
     type: "TRUCKS",
     number: "4553",
     driver: "SAHBAZ",
@@ -278,7 +278,7 @@ const vehicles = [
 },
 
 {
-    id: 33,
+    id: 25,
     type: "TRUCKS",
     number: "4554",
     driver: "ADHAM",
@@ -289,7 +289,7 @@ const vehicles = [
 },
 
 {
-    id: 34,
+    id: 26,
     type: "TRUCKS",
     number: "4556",
     driver: "BAKR",
@@ -300,7 +300,7 @@ const vehicles = [
 },
 
 {
-    id: 35,
+    id: 27,
     type: "TRUCKS",
     number: "4557",
     driver: "ZIA UR",
@@ -311,7 +311,7 @@ const vehicles = [
 },
 
 {
-    id: 36,
+    id: 28,
     type: "TRUCKS",
     number: "4558",
     driver: "RADI",
@@ -322,7 +322,7 @@ const vehicles = [
 },
 
   {
-    id: 37,
+    id: 29,
     type: "TRUCKS",
     number: "4559",
     driver: "RAMDAN",
@@ -333,7 +333,7 @@ const vehicles = [
 },
 
 {
-    id: 38,
+    id: 30,
     type: "TRUCKS",
     number: "2924",
     driver: "NO DRIVER",
@@ -344,7 +344,7 @@ const vehicles = [
 },
 
 {
-    id: 39,
+    id: 31,
     type: "TRUCKS",
     number: "2932",
     driver: "MUDATHER",
@@ -355,7 +355,7 @@ const vehicles = [
 },
 
   {
-    id: 40,
+    id: 32,
     type: "TRUCKS",
     number: "2950",
     driver: "NO DRIVER",
@@ -366,7 +366,7 @@ const vehicles = [
 },
 
 {
-    id: 41,
+    id: 33,
     type: "TRUCKS",
     number: "4676",
     driver: "LAKBA",
@@ -377,7 +377,7 @@ const vehicles = [
 },
 
 {
-    id: 42,
+    id: 34,
     type: "TRUCKS",
     number: "4677",
     driver: "SAMI",
@@ -388,7 +388,7 @@ const vehicles = [
 },
 
 {
-    id: 43,
+    id: 35,
     type: "TRUCKS",
     number: "2062",
     driver: "SHEVNDR",
@@ -399,7 +399,7 @@ const vehicles = [
 },
 
 {
-    id: 44,
+    id: 36,
     type: "TRUCKS",
     number: "2087",
     driver: "KISHOR",
@@ -410,7 +410,7 @@ const vehicles = [
 },
 
 {
-    id: 45,
+    id: 37,
     type: "TRUCKS",
     number: "6031",
     driver: "MENA",
@@ -421,7 +421,7 @@ const vehicles = [
 },
 
   {
-    id: 46,
+    id: 38,
     type: "TRUCKS",
     number: "6032",
     driver: "NO DRIVER",
@@ -432,7 +432,7 @@ const vehicles = [
 },
 
 {
-    id: 47,
+    id: 39,
     type: "TRUCKS",
     number: "6033",
     driver: "SAFIL",
@@ -443,7 +443,7 @@ const vehicles = [
 },
 
 {
-    id: 48,
+    id: 40,
     type: "TRUCKS",
     number: "3162",
     driver: "NO DRIVER",
@@ -458,7 +458,7 @@ const vehicles = [
 ----------------------------------------*/
 
 {
-    id: 1,
+    id: 41,
     type: "SPECIAL",
     number: "2633",
     driver: "BILAL",
@@ -469,7 +469,7 @@ const vehicles = [
 },
 
 {
-    id: 2,
+    id: 42,
     type: "SPECIAL",
     number: "5018",
     driver: "FATHY",
@@ -480,7 +480,7 @@ const vehicles = [
 },
 
 {
-    id: 3,
+    id: 43,
     type: "SPECIAL",
     number: "6758",
     driver: "OMRAN",
@@ -491,7 +491,7 @@ const vehicles = [
 },
 
 {
-    id: 4,
+    id: 44,
     type: "SPECIAL",
     number: "6835",
     driver: "TILAWAT",
@@ -502,7 +502,7 @@ const vehicles = [
 },
 
 {
-    id: 5,
+    id: 45,
     type: "SPECIAL",
     number: "6839",
     driver: "TILAK",
@@ -513,7 +513,7 @@ const vehicles = [
 },
 
 {
-    id: 6,
+    id: 46,
     type: "SPECIAL",
     number: "7542",
     driver: "KRISNA",
@@ -524,7 +524,7 @@ const vehicles = [
 },
 
   {
-    id: 7,
+    id: 47,
     type: "SPECIAL",
     number: "7661",
     driver: "ASAD",
@@ -535,7 +535,7 @@ const vehicles = [
 },
 
 {
-    id: 8,
+    id: 48,
     type: "SPECIAL",
     number: "7668",
     driver: "OMRAN",
@@ -546,7 +546,7 @@ const vehicles = [
 },
 
 {
-    id: 9,
+    id: 49,
     type: "SPECIAL",
     number: "7759",
     driver: "BILAL",
@@ -562,7 +562,7 @@ const vehicles = [
 ----------------------------------------*/
 
 {
-    id: 1,
+    id: 50,
     type: "EQUIPMENT",
     number: "1817",
     driver: "PADAM",
@@ -573,7 +573,7 @@ const vehicles = [
 },
 
 {
-    id: 2,
+    id: 51,
     type: "EQUIPMENT",
     number: "2400",
     driver: "ADHAM",
@@ -584,7 +584,7 @@ const vehicles = [
 },
 
 {
-    id: 3,
+    id: 52,
     type: "EQUIPMENT",
     number: "6219",
     driver: "RAM KUMAR",
@@ -595,7 +595,7 @@ const vehicles = [
 }
 
   {
-    id: 4,
+    id: 53,
     type: "EQUIPMENT",
     number: "6900",
     driver: "PAPUSH",
@@ -606,7 +606,7 @@ const vehicles = [
 },
 
 {
-    id: 5,
+    id: 54,
     type: "EQUIPMENT",
     number: "7470",
     driver: "OTHMAN",
@@ -617,7 +617,7 @@ const vehicles = [
 },
 
 {
-    id: 6,
+    id: 55,
     type: "EQUIPMENT",
     number: "9956",
     driver: "ZOHIB",
@@ -628,7 +628,7 @@ const vehicles = [
 }
 
 {
-    id: 7,
+    id: 56,
     type: "EQUIPMENT",
     number: "7772",
     driver: "NO OPERATOR",
@@ -639,7 +639,7 @@ const vehicles = [
 },
 
 {
-    id: 8,
+    id: 57,
     type: "EQUIPMENT",
     number: "1384",
     driver: "SUNIL",
@@ -650,7 +650,7 @@ const vehicles = [
 },
 
 {
-    id: 9,
+    id: 58,
     type: "EQUIPMENT",
     number: "HITACHI",
     driver: "MANSOR",
@@ -661,7 +661,7 @@ const vehicles = [
 }
 
 {
-    id: 10,
+    id: 59,
     type: "EQUIPMENT",
     number: "7674",
     driver: "KHUSIRAM",
@@ -672,7 +672,7 @@ const vehicles = [
 },
 
 {
-    id: 11,
+    id: 60,
     type: "EQUIPMENT",
     number: "GCB1",
     driver: "GULAM F",
@@ -683,7 +683,7 @@ const vehicles = [
 },
 
 {
-    id: 12,
+    id: 61,
     type: "EQUIPMENT",
     number: "GCB2",
     driver: "NO OPERATOR",
@@ -694,7 +694,7 @@ const vehicles = [
 }
 
 {
-    id: 13,
+    id: 62,
     type: "EQUIPMENT",
     number: "1182",
     driver: "RAJA",
@@ -705,7 +705,7 @@ const vehicles = [
 },
 
 {
-    id: 14,
+    id: 63,
     type: "EQUIPMENT",
     number: "6023",
     driver: "NO OPERATOR",
@@ -716,7 +716,7 @@ const vehicles = [
 },
 
 {
-    id: 15,
+    id: 64,
     type: "EQUIPMENT",
     number: "FORKLIFT",
     driver: "NOUR",
@@ -727,7 +727,7 @@ const vehicles = [
 }
 
 {
-    id: 16,
+    id: 65,
     type: "EQUIPMENT",
     number: "BOBCAT",
     driver: "OTHMAN",
@@ -738,7 +738,7 @@ const vehicles = [
 },
 
 {
-    id: 17,
+    id: 66,
     type: "EQUIPMENT",
     number: "BOMAG1",
     driver: "LALBABU",
@@ -749,7 +749,7 @@ const vehicles = [
 },
 
 {
-    id: 18,
+    id: 67,
     type: "EQUIPMENT",
     number: "BOMAG2",
     driver: "LUQMAN",
