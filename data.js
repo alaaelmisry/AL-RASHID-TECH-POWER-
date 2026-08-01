@@ -453,108 +453,6 @@ const vehicles = [
     lastUpdate: ""
 },
 
-/*----------------------------------------
-السيارات المتخصصة
-----------------------------------------*/
-
-{
-    id: 41,
-    type: "SPECIAL",
-    number: "2633",
-    driver: "BILAL",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 42,
-    type: "SPECIAL",
-    number: "5018",
-    driver: "FATHY",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 43,
-    type: "SPECIAL",
-    number: "6758",
-    driver: "OMRAN",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 44,
-    type: "SPECIAL",
-    number: "6835",
-    driver: "TILAWAT",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 45,
-    type: "SPECIAL",
-    number: "6839",
-    driver: "TILAK",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 46,
-    type: "SPECIAL",
-    number: "7542",
-    driver: "KRISNA",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-  {
-    id: 47,
-    type: "SPECIAL",
-    number: "7661",
-    driver: "ASAD",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 48,
-    type: "SPECIAL",
-    number: "7668",
-    driver: "OMRAN",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
-
-{
-    id: 49,
-    type: "SPECIAL",
-    number: "7759",
-    driver: "BILAL",
-    status: "working",
-    reason: "",
-    notes: "",
-    lastUpdate: ""
-},
 
   
 /*----------------------------------------
@@ -592,7 +490,7 @@ const vehicles = [
     reason: "",
     notes: "",
     lastUpdate: ""
-}
+},
 
   {
     id: 53,
@@ -625,7 +523,7 @@ const vehicles = [
     reason: "",
     notes: "",
     lastUpdate: ""
-}
+},
 
 {
     id: 56,
@@ -658,7 +556,7 @@ const vehicles = [
     reason: "",
     notes: "",
     lastUpdate: ""
-}
+},
 
 {
     id: 59,
@@ -691,7 +589,7 @@ const vehicles = [
     reason: "",
     notes: "",
     lastUpdate: ""
-}
+},
 
 {
     id: 62,
@@ -724,7 +622,7 @@ const vehicles = [
     reason: "",
     notes: "",
     lastUpdate: ""
-}
+},
 
 {
     id: 65,
